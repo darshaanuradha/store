@@ -23,7 +23,7 @@ $result = mysqli_query($conn, $query);
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-16">
                 <div class="flex items-center">
-                    <i class="fas fa-store text-3xl text-blue-600 mr-3"></i>
+                    <i class="fas fa-store text-3xl text-green-600 mr-3"></i>
                     <h1 class="text-2xl font-bold text-gray-900">Store</h1>
                 </div>
                 <div class="flex items-center space-x-4">
@@ -34,17 +34,17 @@ $result = mysqli_query($conn, $query);
                         <i class="fas fa-shopping-cart text-xl"></i>
                         <span class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">0</span>
                     </button>
-                    <button class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition">Sign In</button>
+                    <button class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition">Sign In</button>
                 </div>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-12 px-4">
+    <div class="bg-gradient-to-r from-green-600 to-green-800 text-white py-12 px-4">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Premium Products</h2>
-            <p class="text-lg text-blue-100 mb-6">Discover our handpicked collection of quality items</p>
+            <p class="text-lg text-green-100 mb-6">Discover our handpicked collection of quality items</p>
         </div>
     </div>
 
@@ -53,7 +53,7 @@ $result = mysqli_query($conn, $query);
         <!-- Filters and Sort -->
         <div class="mb-8 flex justify-between items-center">
             <h3 class="text-2xl font-bold text-gray-900">All Products</h3>
-            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <select class="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
                 <option>Sort By: Latest</option>
                 <option>Price: Low to High</option>
                 <option>Price: High to Low</option>
@@ -66,7 +66,7 @@ $result = mysqli_query($conn, $query);
             <?php while($row = mysqli_fetch_assoc($result)) { 
                 $inStock = $row['quantity'] > 0;
                 $stockClass = $inStock ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800';
-                $buttonClass = $inStock ? 'bg-blue-600 hover:bg-blue-700' : 'bg-gray-400 cursor-not-allowed';
+                $buttonClass = $inStock ? 'bg-green-600 hover:bg-green-700' : 'bg-gray-400 cursor-not-allowed';
             ?>
             <!-- Product Card -->
             <div class="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 overflow-hidden group">
@@ -95,7 +95,7 @@ $result = mysqli_query($conn, $query);
                     <div class="mb-4 pb-4 border-b border-gray-200">
                         <div class="flex justify-between items-center">
                             <div>
-                                <span class="text-2xl font-bold text-blue-600">${<?php echo number_format($row['price'], 2); ?></span>
+                                <span class="text-2xl font-bold text-green-600">${<?php echo number_format($row['price'], 2); ?></span>
                             </div>
                             <div class="text-right">
                                 <p class="text-xs text-gray-500">Available</p>
