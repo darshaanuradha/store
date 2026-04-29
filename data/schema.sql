@@ -22,3 +22,12 @@ INSERT INTO product (name, description, price, stock) VALUES
 ('Keyboard', 'Mechanical keyboard', 8000.00, 30),
 ('Mouse', 'Wireless mouse', 3500.00, 40);
 
+DELIMITER $$
+
+CREATE PROCEDURE AddProduct (IN p_name VARCHAR(255),IN p_description TEXT,IN p_price DECIMAL(10,2))
+BEGIN
+    INSERT INTO product (name, description, price)
+    VALUES (p_name, p_description, p_price);
+END $$
+
+DELIMITER ;

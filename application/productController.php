@@ -7,7 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'add_product')
     $price = $_POST['price'];
 
     // Insert the new product into the database
-    $stmt = $conn->prepare("INSERT INTO product (name, description, price) VALUES (?, ?, ?)");
+    $stmt = $conn->prepare("CALL AddProduct(?, ?, ?)");
     $stmt->bind_param("ssd", $name, $description, $price);
     if ($stmt->execute()) {
         header("Location: ../index.php?page=product");
