@@ -13,7 +13,7 @@ $product = $conn->query("SELECT * FROM product");
             <p><?php echo $row['description']; ?></p>
             <p class="text-green-600 font-bold">$<?php echo $row['price']; ?></p>
             <a href="index.php?page=edit_product&id=<?php echo $row['id']; ?>" class="text-blue-500 hover:underline">Edit</a>
-            <a href="index.php?action=delete&page=delete_product&id=<?php echo $row['id']; ?>" class="text-red-500 hover:underline ml-2">Delete</a>
+            <a href="application/productController.php?action=delete&page=delete_product&id=<?php echo $row['id']; ?>" class="text-red-500 hover:underline ml-2">Delete</a>
         </li>
     <?php } ?>
 </ul>

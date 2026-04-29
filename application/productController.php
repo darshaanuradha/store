@@ -1,7 +1,7 @@
 <?php
 require_once 'database.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['formName'] === 'add_product') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'add_product') {
     $name = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['formName'] === 'add_product
     $stmt->close();
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['formName'] === 'edit_product') {
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && $_POST['action'] === 'edit_product') {
     $name = $_POST['name'];
     $description = $_POST['description'];
     $price = $_POST['price'];

@@ -1,7 +1,7 @@
 <h1>Add Product</h1>
 <p>Use the form below to add a new product to the store.</p>
 <form action="application/productController.php" method="POST" class="max-w-md mx-auto">
-    <input type="text" name="formName" value="add_product" hidden>
+    <input type="text" name="action" value="add_product" hidden>
 
     <div class="mb-4">
         <label for="name" class="block text-gray-700">Product Name:</label>
